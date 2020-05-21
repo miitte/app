@@ -30,6 +30,7 @@
   },
   "private": true,
   "devDependencies": {
+    "@marko-tags/context": "^2.1.1",
     "electron": "^9.0.0",
     "electron-reloader": "^1.0.1",
     "npm-run-all": "^4.1.5",
