@@ -17,6 +17,7 @@ export default [
     plugins: [
       marko(),
       nodeResolve({
+        mainFields: ['module'],
         browser: true,
           extensions: [".js", ".marko"]
         }),
