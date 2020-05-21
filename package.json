@@ -1,0 +1,37 @@
+{
+  "name": "miitte",
+  "version": "1.0.0",
+  "description": "Sample app: Marko + Rollup",
+  "main": "build/main.js",
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "build-prod": "NODE_ENV=production rollup -c rollup.config.js",
+    "start": "npm-run-all -p start:dev start:electron",
+    "start:dev": "rollup -c -w ",
+    "start:electron": "electron ."
+  },
+  "author": "Patrick Steele-idem <pnidem@gmail.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marko-js/examples.git"
+  },
+  "bugs": {
+    "url": "https://github.com/marko-js/examples/issues"
+  },
+  "homepage": "https://github.com/marko-js/examples",
+  "dependencies": {
+    "@marko/rollup": "^2.0.1",
+    "marko": "^4.18.20",
+    "rollup": "^1.25.2",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-postcss": "^2.0.3"
+  },
+  "private": true,
+  "devDependencies": {
+    "electron": "^9.0.0",
+    "electron-reloader": "^1.0.1",
+    "npm-run-all": "^4.1.5"
+  }
+}
