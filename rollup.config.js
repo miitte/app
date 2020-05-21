@@ -2,6 +2,7 @@ import nodeResolve from "rollup-plugin-node-resolve";
 import commonjs from "rollup-plugin-commonjs";
 import marko from "@marko/rollup";
 import postcss from "rollup-plugin-postcss";
+import copy from "rollup-plugin-copy";
 
 import path from 'path';
 
@@ -28,6 +29,11 @@ export default [
       // If using `style` blocks with Marko you must use an appropriate plugin.
       postcss({
         external: true
+      }),
+      copy({
+        targets: [
+          { src: 'src/index.html', dest: 'build' }
+        ]
       })
     ],
 		output: [
