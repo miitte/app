@@ -1,8 +1,9 @@
-import electron from 'electron'
-import path from 'path'
-import url from 'url'
-import isDev from './isDev'
-import reloader from 'electron-reloader'
+const electron = require('electron')
+const path = require('path')
+const url = require('url')
+const reloader = require('electron-reloader')
+
+const isDev = process.defaultApp || /node_modules[\\/]electron[\\/]/.test(process.execPath)
 
 isDev && reloader(module)
 
@@ -20,7 +21,7 @@ function createWindow() {
 	mainWindow.loadURL(
 		url.format({
 			pathname: path.join(__dirname, 'index.html'),
-			protocol: 'file:',
+			protocol: 'file',
 			slashes: true,
 		})
 	)

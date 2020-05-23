@@ -1,39 +1,42 @@
 {
   "name": "miitte",
-  "version": "1.0.0",
-  "description": "Sample app: Marko + Rollup",
-  "main": "build/main.js",
+  "description": "Electron-based implementation of miitte",
+  "version": "0.0.0",
+  "author": "kettek",
   "scripts": {
-    "build": "rollup -c rollup.config.js",
-    "build-prod": "NODE_ENV=production rollup -c rollup.config.js",
-    "start": "npm-run-all -p start:dev start:electron",
-    "start:dev": "rollup -c -w ",
-    "start:electron": "electron ."
+    "build": "webpack --progress",
+    "start": "electron ."
   },
-  "author": "Patrick Steele-idem <pnidem@gmail.com>",
-  "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/marko-js/examples.git"
-  },
-  "bugs": {
-    "url": "https://github.com/marko-js/examples/issues"
-  },
-  "homepage": "https://github.com/marko-js/examples",
   "dependencies": {
-    "@marko/rollup": "^2.0.1",
-    "marko": "^4.18.20",
-    "rollup": "^1.25.2",
-    "rollup-plugin-postcss": "^2.0.3"
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "marked": "^0.7.0",
+    "purecss": "^1.0.1",
+    "raptor-pubsub": "^1.0.5",
+    "raptor-util": "^3.1.0",
+    "serve-static": "^1.14.1",
+    "whatwg-fetch": "^3.0.0"
   },
-  "private": true,
   "devDependencies": {
     "@marko-tags/context": "^2.1.1",
-    "@rollup/plugin-commonjs": "^12.0.0",
-    "@rollup/plugin-node-resolve": "^8.0.0",
+    "@marko/webpack": "^1.2.0",
+    "copy-webpack-plugin": "^6.0.1",
+    "css-loader": "^3.0.0",
     "electron": "^9.0.0",
+    "electron-reload": "^1.5.0",
     "electron-reloader": "^1.0.1",
-    "npm-run-all": "^4.1.5",
-    "rollup-plugin-copy": "^3.3.0"
-  }
+    "file-loader": "^4.0.0",
+    "ignore-emit-webpack-plugin": "^2.0.2",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
+    "marko": "^4.18.20",
+    "marko-cli": "^6.0.3",
+    "mini-css-extract-plugin": "^0.8.0",
+    "svg-url-loader": "^3.0.0",
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
+  },
+  "license": "GPLv3",
+  "main": "build/main.js"
 }
