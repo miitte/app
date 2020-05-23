@@ -1,5 +1,5 @@
-import nodeResolve from "rollup-plugin-node-resolve";
-import commonjs from "rollup-plugin-commonjs";
+import nodeResolve from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
 import marko from "@marko/rollup";
 import postcss from "rollup-plugin-postcss";
 import copy from "rollup-plugin-copy";
@@ -20,8 +20,8 @@ export default [
       nodeResolve({
         mainFields: ['module'],
         browser: true,
-          extensions: [".js", ".marko"]
-        }),
+        extensions: [".js", ".marko"]
+      }),
       // NOTE: Marko 4 compiles to commonjs, this plugin is also required.
       commonjs({
         extensions: [".js", ".marko"]
