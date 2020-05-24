@@ -5,6 +5,7 @@
   "author": "kettek",
   "scripts": {
     "build": "webpack --progress",
+    "watch": "webpack --watch --progress",
     "start": "electron ."
   },
   "dependencies": {
