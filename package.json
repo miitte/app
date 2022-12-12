@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "compression": "^1.7.4",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "marked": "^0.7.0",
     "purecss": "^1.0.1",
     "raptor-pubsub": "^1.0.5",
